@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+
+<html lang='en'>
+    <meta charset='utf-8'>
+    <style>
+        
+        body {
+            background-image: url('universityOfMissouri.jpeg');
+            background-repeat: no-repeat;
+        }
+        
+        #student {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            width: 33%;
+            text-align: center;
+            margin-left: 33.5%;
+            margin-right: 33.5%;
+            color: black;
+        }
+        
+        .main {
+            margin-top: 10%;
+            padding-bottom: 2%;
+            width: 33%;
+            margin-left: 33.5%;
+            margin-right: 33.5%;
+            height: auto;
+            border: 2px solid black;
+            background-color: rgba(224, 224, 224, 0.8);
+            text-align: center;
+        }
+
+        .sidenav {
+          height: 100%;
+          width: 17.5%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: goldenrod;
+          overflow-x: hidden;
+          padding-top: 60px;
+      }
+        
+         .logo-image{
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            margin-top: -6px;
+            z-index: 2;
+            display: block;
+            align-content: center;
+        }
+  </style>
+    
+    <script src="Login.js"></script>
+    
+  <title>SERS | Login</title>
+
+</head>
+
+<body>    
+        <div class="main">
+          <h2 id="student">Welcome to SERS</h2>
+          <label for="uname"><b>Username: </b></label>
+          <input id="username" type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="pwd"><b>Password: </b></label>
+          <input id="password" type="password" placeholder="Enter Password" name="pwd" required>
+
+          <button type="login" value='login' onclick="addEvent1()">Sign In</button>
+        </div>
+
+        <div class="sidenav">
+            <a class="navbar-brand" href="/">
+              <div class="logo-image">
+                    <img src="mu-tiger.png" class="img-fluid">
+              </div>
+            </a>
+        </div>
+        
+</body>
+
+</html>
