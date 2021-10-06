@@ -1,0 +1,8 @@
+{
+  "name": "SERS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "ecf340ad"
+}
