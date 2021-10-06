@@ -1,0 +1,253 @@
+<!DOCTYPE html> 
+
+<html lang='en'>
+    <meta charset='utf-8'>
+    <style>
+        
+        body {
+            background-color: darkgray;
+        }
+        
+        .chat {
+            height: 91.5%;
+            position: fixed;
+            margin-left: 43.5%;
+            width: 55%;
+            display: block;
+            margin-right: 0%;
+            border: 2px solid black;
+            background-color: lightgray;
+            overflow: scroll;
+        }
+        
+        .main {
+            height: 98%;
+            position: fixed;
+            margin-left: 7.5%;
+            width: 35%;
+            display: block;
+            margin-right: 46%;
+            border: 2px solid black;
+            background-color: lightgray;
+            overflow: scroll;
+        }
+        
+        .person {
+            height: 5%;
+            margin-left: 43.5%;
+            width: 55%;
+            background-color: goldenrod;
+            bottom: 0;
+            position: absolute;
+            border: 2px solid black;
+            margin-bottom: .5%;
+        }
+
+        p {
+            padding-left: 1%;
+        }
+        
+        .sidenav {
+          height: 100%;
+          width: 7.5%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: goldenrod;
+          overflow-x: hidden;
+      }
+    
+        #currentuser {
+          height: 75px;
+          width: 75px;
+          background-color: lightgray;
+          border-radius: 50%;
+          display: block;
+          margin-top: 640px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: auto;
+          border: 2px solid black;
+          z-index: 3;
+        }
+        
+        #backbutton {
+            margin-top: 15%;
+            margin-left: auto;
+            margin-right: auto; 
+            display: block;
+            width: 75px;
+            height: 75px;
+            background-color: lightgray;
+            color: black;
+            border: 2px solid black;
+        }
+        
+        #messagebox {
+            width: 90%;
+            margin-left: 1%;
+        }
+        
+        #newChat {
+          margin-left: 92%;
+        }
+        
+         .logo-image{
+            margin-left: 43.5%;
+            width: 55%;
+            display: block;
+        }
+        
+/*        the rest is for the map*/
+        
+        #map {
+            height: 98%;
+            position: fixed;
+            margin-left: 43.5%;
+            width: 55%;
+            display: block;
+            margin-right: 0%;
+            border: 2px solid black;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        #description {
+          font-family: Roboto;
+          font-size: 15px;
+          font-weight: 300;
+        }
+
+        #infowindow-content .title {
+          font-weight: bold;
+        }
+
+        #infowindow-content {
+          display: none;
+        }
+
+        #map #infowindow-content {
+          display: inline;
+        }
+
+        .pac-card {
+          background-color: #fff;
+          border: 0;
+          border-radius: 2px;
+          box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+          margin: 10px;
+          padding: 0 0.5em;
+          font: 400 18px Roboto, Arial, sans-serif;
+          overflow: hidden;
+          font-family: Roboto;
+          padding: 0;
+        }
+
+        #pac-container {
+          padding-bottom: 12px;
+          margin-right: 12px;
+        }
+
+        .pac-controls {
+          display: inline-block;
+          padding: 5px 11px;
+        }
+
+        .pac-controls label {
+          font-family: Roboto;
+          font-size: 13px;
+          font-weight: 300;
+        }
+
+        #pac-input {
+          background-color: #fff;
+          font-family: Roboto;
+          font-size: 15px;
+          font-weight: 300;
+          margin-left: 20%;
+          margin-right: auto;
+          padding: 0 11px 0 13px;
+          text-overflow: ellipsis;
+          width: 400px;
+        }
+
+        #pac-input:focus {
+          border-color: #4d90fe;
+        }
+
+        #title {
+          color: #fff;
+          background-color: #4d90fe;
+          font-size: 25px;
+          font-weight: 500;
+          padding: 6px 12px;
+        }
+
+        #target {
+          width: 345px;
+        }
+    
+  </style>
+    
+    <script src="DispatchChat.js"></script>
+    <script src="LatLong.js"></script>
+    
+
+    <title>SERS | Home</title>
+
+</head>
+
+<body>    
+    
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdLeN6x1QoN5lhLuzDu3AUziUVJFpqKe0&libraries=places&callback=initAutocomplete">
+        </script>
+    
+        <div class="main">
+           <button type="button" id="newTicket" onClick="addTicket()">Refresh</button>
+           <button type="button" id="location" onClick="showMap()">Locate</button>
+            
+            <div id="ticket" class="people">
+
+            </div>
+        </div>
+
+          <div class="logo-image" id='logo'>
+                <img src="SERS.png" class="img-fluid">
+          </div>
+    
+        <div class="chat" id="chat">
+            
+            
+           <button type="button" id="newChat" onClick="addChat()">Refresh</button>
+                <div id="text" class="sender">
+                </div>
+        </div>
+    
+        <div class="person" id="person">
+            <input id="messagebox" type="text" placeholder="Type message here" name="chat">
+            <button type="send" value='send' onClick="sendChat()">send</button>
+        </div>
+
+        <div class="sidenav">
+            <button id="backbutton" type="logout" value='logout'>Logout</button>
+            <div class="user">
+                <button id="currentuser" type="currentuser" value='currentuser'>PD</button>
+            </div>
+        </div>
+        
+
+            <input id="pac-input" class="controls" type="text" placeholder="Search Box"/>
+            <div id="map">    
+            </div>
+
+</body>
+
+</html>
