@@ -5,3 +5,5 @@
 ## Reporting a Vulnerability
 
 -Please contact a member of the orginization to report any security concerns.
+
+Thank you!
