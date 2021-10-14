@@ -12,16 +12,28 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
+import { appRoutingModule } from './app.routing';
+
+import { LoginPageComponent } from './login-page/login-page.component';
+//import { HomePageComponent } from './home-page/home-page.component';
+//import { RegisterPageComponent } from './register-page/-page.component';
+
+
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    LoginPageComponent
+    //HomePageComponent
+    //RegisterPageComponent
   ],
   imports: [
     BrowserModule,
+    appRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
     LayoutModule,
