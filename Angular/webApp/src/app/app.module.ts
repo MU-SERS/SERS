@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -12,7 +12,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
-import { appRoutingModule } from './app.routing';
+import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
+import { appRoutingModule } from './app-routing.module';
 
 import { LoginPageComponent } from './login-page/login-page.component';
 //import { HomePageComponent } from './home-page/home-page.component';
