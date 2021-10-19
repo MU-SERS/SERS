@@ -11,14 +11,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { appRoutingModule } from './app-routing.module';
 
 import { LoginPageComponent } from './login-page/login-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 //import { HomePageComponent } from './home-page/home-page.component';
 //import { RegisterPageComponent } from './register-page/-page.component';
+
+//import { GridListDynamicExample } from
 
 
 
@@ -29,7 +34,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
   declarations: [
     AppComponent,
     NavBarComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    LandingPageComponent
     //HomePageComponent
     //RegisterPageComponent
   ],
@@ -44,6 +50,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
