@@ -20,6 +20,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { appRoutingModule } from './app-routing.module';
+import { AngularNeo4jModule } from 'angular-neo4j';
+
 
 import { LoginPageComponent } from './login-page/login-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -56,7 +58,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    AngularNeo4jModule
   ],
   providers: [],
   bootstrap: [AppComponent]
