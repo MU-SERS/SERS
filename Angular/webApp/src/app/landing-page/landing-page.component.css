@@ -1,10 +1,8 @@
 
 .mainGrid{
-    width: auto;
-    height: auto;
-    border: 2px solid red;
-}
 
-.gridTile{
-    border: 1px solid black;
+    
+    width: 40%;
+    height: 40%;
+    border: 2px solid red;
 }

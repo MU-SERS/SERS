@@ -12,6 +12,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 
 import { AppComponent } from './app.component';
@@ -40,7 +43,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     //RegisterPageComponent
   ],
   imports: [
-    BrowserModule,
+  
+  BrowserModule,
     appRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
@@ -50,7 +54,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

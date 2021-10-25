@@ -15,6 +15,8 @@ const routes: Routes = [
     //{path: '', component:LoginPageComponent },
     //{path: 'register', component:RegisterPageComponent },
     {path: 'login', component:LoginPageComponent },
+
+    //because theres nothing it auto defaults to the page.
     {path: '', component:LandingPageComponent },
 
 
