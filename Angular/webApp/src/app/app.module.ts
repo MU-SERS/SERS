@@ -23,8 +23,9 @@ import { appRoutingModule } from './app-routing.module';
 
 import { LoginPageComponent } from './login-page/login-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-//import { HomePageComponent } from './home-page/home-page.component';
-//import { RegisterPageComponent } from './register-page/-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
+
 
 //import { GridListDynamicExample } from
 
@@ -38,9 +39,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     AppComponent,
     NavBarComponent,
     LoginPageComponent,
-    LandingPageComponent
-    //HomePageComponent
-    //RegisterPageComponent
+    LandingPageComponent,
+    HomePageComponent,
+    SignUpPageComponent
+  
   ],
   imports: [
   
