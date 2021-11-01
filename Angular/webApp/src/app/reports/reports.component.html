@@ -1,0 +1,24 @@
+<div class="tips">
+    <ul>
+    <li class="tipsList" *ngFor="let tip of tipList; let $index = index">
+        <p>From: Anonymous</p>
+        <p>Date: {{tip.date}}</p>
+        <button (click)="openTip($index)">Go 2 report</button>
+      </li>
+    </ul>
+</div>
+
+<div class="report">
+    <div class="reportFormat" *ngIf="activeTip">
+        <button style="margin-left: 85%;">Download</button>
+        <p>Title:</p>
+        <p>{{activeTip.report.title}}</p>
+        <br>
+        <p style="border-bottom: 1px solid black;"></p>
+        <br>
+        <p>Body:</p>
+        <p>{{activeTip.report.body}}</p>
+    </div> 
+</div>
+
+

@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import {Component} from '@angular/core';
-
-/**
- * @title Toolbar overview
- */
-@Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
-})
-export class AppComponent {
-  title = 'webApp';
-=======
 import { Component } from '@angular/core';
+
+const SESSION_COOKIE_MINUTES = 5;
+const SESSION_COOKIE_IDENTIFIER = 'name=session';
 
 @Component({
   selector: 'app-root',
@@ -21,5 +10,41 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SERS';
->>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
+  isLogin = true;
+  usernameValue = '';
+  passwordValue = '';
+
+  ngOnInit(): void {
+    const hasSession = document.cookie
+    .split('; ')
+    .find((piece: string) => piece === SESSION_COOKIE_IDENTIFIER);
+
+    if (hasSession) {
+      this.isLogin = false;
+    }
+  }
+
+  logout(): void {
+    this.isLogin = true;
+    this.usernameValue = '';
+    this.passwordValue = '';
+
+    // Remove session cookie
+    document.cookie = `${SESSION_COOKIE_IDENTIFIER}; max-age=0`;
+  }
+
+  login(): void {
+    if (this.usernameValue && this.passwordValue) {
+      this._loginSuccess();
+    }
+  }
+
+  private _loginSuccess(): void {
+    this.isLogin = false;
+    const seconds = SESSION_COOKIE_MINUTES * 60; 
+    document.cookie = `${SESSION_COOKIE_IDENTIFIER}; max-age=${seconds}`;
+  }
+
+
 }
+
