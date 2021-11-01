@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+<<<<<<< HEAD
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
@@ -59,9 +60,24 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
     MatGridListModule,
     MatCardModule,
     MatFormFieldModule
+=======
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+>>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326

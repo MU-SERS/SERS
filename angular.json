@@ -1,16 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-<<<<<<< HEAD
   "cli": {
     "analytics": false
   },
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "webApp": {
-      "projectType": "application",
-      "schematics": {
-=======
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -20,7 +12,6 @@
         "@schematics/angular:component": {
           "style": "scss"
         },
->>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
         "@schematics/angular:application": {
           "strict": true
         }
@@ -32,30 +23,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
-            "outputPath": "dist/webApp",
-=======
             "outputPath": "dist/SERS",
->>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-<<<<<<< HEAD
-=======
             "inlineStyleLanguage": "scss",
->>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
-              "src/styles.css"
-=======
               "src/styles.scss"
->>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
             ],
             "scripts": []
           },
@@ -96,17 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-<<<<<<< HEAD
-              "browserTarget": "webApp:build:production"
-            },
-            "development": {
-              "browserTarget": "webApp:build:development"
-=======
               "browserTarget": "SERS:build:production"
             },
             "development": {
               "browserTarget": "SERS:build:development"
->>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
             }
           },
           "defaultConfiguration": "development"
@@ -114,11 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
-            "browserTarget": "webApp:build"
-=======
             "browserTarget": "SERS:build"
->>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
           }
         },
         "test": {
@@ -128,21 +96,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-<<<<<<< HEAD
-=======
             "inlineStyleLanguage": "scss",
->>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
-              "src/styles.css"
-=======
               "src/styles.scss"
->>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
             ],
             "scripts": []
           }
@@ -150,9 +110,5 @@
       }
     }
   },
-<<<<<<< HEAD
-  "defaultProject": "webApp"
-=======
   "defaultProject": "SERS"
->>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
 }

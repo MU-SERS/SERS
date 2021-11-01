@@ -1,0 +1,40 @@
+<ng-container *ngIf="isLogin; else home">
+  <body>    
+    <div class="main">
+      <h2 id="student">Welcome to SERS</h2>
+      <label for="uname"><b>Username: </b></label>
+      <input [(ngModel)]="usernameValue" id="username" placeholder="Enter Username" name="uname" required>
+
+      <label for="pwd"><b>Password: </b></label>
+      <input [(ngModel)]="passwordValue" id="password" type="password" placeholder="Enter Password" name="pwd" required>
+
+      <button type="submit" value='login' (click)="login()">Sign In</button>
+    </div>
+
+    <div class="sidenav">
+        <a class="navbar-brand" href="/">
+          <div class="logo-image">
+                <img src="../assets/mu-tiger.png" class="img-fluid">
+          </div>
+        </a>
+    </div>
+</body>
+</ng-container>
+
+<ng-template #home>
+  <main>
+      <aside>
+          <div class="menuOptions">
+            <button (click)="logout()">Logout</button>
+            <button routerLink="/tickets">Students</button>
+            <button routerLink="/map">Locate</button>
+            <button routerLink="/reports">Reports</button>
+            <button>User</button>
+          </div>
+      </aside>
+    
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+  </main>
+</ng-template>

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # WebApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
+=======
+# SERS
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
+>>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
 
 ## Development server
 

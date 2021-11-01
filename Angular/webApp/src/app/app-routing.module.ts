@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+<<<<<<< HEAD
 import { Routes, RouterModule } from '@angular/router';
 //this is where we import the "pages" or folders within the app folder to make them visable.
 
@@ -28,3 +29,14 @@ const routes: Routes = [
 ];
 
 export const appRoutingModule = RouterModule.forRoot(routes);
+=======
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+>>>>>>> 565c42ca5754ffdee1a6c15178695f4275ebf326
