@@ -1,0 +1,16 @@
+<button
+    type="button"
+    class="nav-button"
+    (click)="showMenu()"
+>User</button>
+<div
+    class="popover-menu"
+    [ngClass]="{'active': popoverOpen}"
+>
+<div>
+    <button (click)="closeMenu()">X</button>
+    <p>Current User:</p>
+    <p>Dispatch</p>
+</div>
+
+</div>

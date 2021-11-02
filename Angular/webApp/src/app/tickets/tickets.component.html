@@ -1,0 +1,33 @@
+<div class="tickets">
+    <div>
+        <input placeholder="Filter on device">
+        <button>Search</button>
+    </div>
+    <ul>
+        <li class="texts" *ngFor="let student of studentList">
+            <p>From: {{student.name}}</p>
+            <p>Device: {{student.number}}</p>
+            <button
+                [ngClass]="{'unvisited': irs.readTickets.indexOf(student.id) === -1}"
+                (click)="openChat(student.id)"
+            >Go 2 chat</button>
+        </li>
+    </ul>
+</div>
+
+<div class="chat">
+    <div *ngIf="activeChat">
+        <ul>
+            <li class="chatMessages" *ngFor="let message of getStudentById(activeChat)?.messages">
+                <p>{{message.messageBody}}</p>
+                <p style="text-decoration: underline;">Sent at: {{formatDate(message.timeStamp)}}</p>
+            </li>
+        </ul>
+        <div class="input">
+            <input id="textBox" type="text" [(ngModel)]="inputValue" placeholder="Enter Message Here">
+            <button (click)="sendChat()">Send</button>
+        </div>
+    </div>
+</div>
+
+

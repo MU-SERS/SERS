@@ -1,0 +1,21 @@
+:host {
+    position: relative;
+    .popover-menu {
+        background-color: whitesmoke;
+        z-index: 999;
+        
+        &:not(.active) {
+            display: none;
+        }
+        
+        &.active {
+            position: fixed;
+            left: 93px;
+            bottom: 25px;
+            width: 140px;
+            height: 140px;
+            border: 1px solid black;
+            box-shadow: darkgrey 1px 1px 1px 1px;
+        }
+    }
+}

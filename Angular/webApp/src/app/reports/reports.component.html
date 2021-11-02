@@ -1,0 +1,26 @@
+<div class="tips">
+    <ul>
+    <li class="tipsList" *ngFor="let tip of reportList; let $index = index">
+        <p>From: Anonymous</p>
+        <p>Date: {{tip.date}}</p>
+        <button 
+        [ngClass]="{'unvisited': irs.readReports.indexOf(tip.id) === -1}"
+        (click)="openTip($index)">Go 2 report</button>
+      </li>
+    </ul>
+</div>
+
+<div class="report">
+    <div class="reportFormat" *ngIf="activeTip">
+        <button style="float: right;" (click)="downloadRepo(activeTip)">Download</button>
+        <p>Title:</p>
+        <p>{{activeTip.title}}</p>
+        <br>
+        <p style="border-bottom: 1px solid black;"></p>
+        <br>
+        <p>Body:</p>
+        <p>{{activeTip.body}}</p>
+    </div> 
+</div>
+
+

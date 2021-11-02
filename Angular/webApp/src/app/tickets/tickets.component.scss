@@ -1,0 +1,84 @@
+:host {
+    display: flex;
+    height: 100%;
+    .tickets {
+        height: 100%;
+        width: 98%; 
+        border: 1px solid black; 
+        margin-left: .75%; 
+        margin-right: .75%; 
+        background-color: lightgray; 
+        display: block;
+        > div {
+            height: auto;
+            display: flex;
+            margin-right: 4%;
+            button {
+                flex: 0;
+
+            }
+            input {
+                flex: 1;
+            }
+        }
+        > ul {
+            padding-left: 0%;
+            overflow-y: auto;
+            margin: 4%;
+            button.unvisited {
+                background-color: darkgray;
+            }
+        }
+        .texts {
+            border: 1px solid black;
+            background-color: whitesmoke; 
+            padding-left: 4%;
+            padding-top: 1%;
+            list-style-type: none;
+            padding-bottom: 4%;
+            margin-bottom: 4%;
+        }
+    }
+    .chat {
+        height: 100%;
+        > div {
+            width: 98%; 
+            border: 1px solid black; 
+            margin-left: .75%; 
+            margin-right: .75%; 
+            background-color: lightgray; 
+            display: block;
+            display: flex;
+            flex-direction: column;
+            > ul {
+                flex: 1;
+                overflow-y: auto;
+                padding-left: 0%;
+                margin: 4%;
+            }
+            .chatMessages {
+                border: 1px solid black;
+                background-color: whitesmoke; 
+                padding-left: 4%;
+                padding-top: 1%;
+                list-style-type: none;
+                padding-bottom: 4%;
+                margin-bottom: 4%;
+            }
+            > .input {
+                flex: .05;
+                background-color: goldenrod;
+            }
+            #textBox {
+                width: 89%;
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+
+        }
+
+    }
+
+}
+
+

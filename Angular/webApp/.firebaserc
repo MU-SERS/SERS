@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "silentemergencymu-ced0a"
+  },
+  "targets": {
+    "silentemergencymu-ced0a": {
+      "hosting": {
+        "SERS": [
+          "silentemergencymu-ced0a"
+        ]
+      }
+    }
+  }
+}
